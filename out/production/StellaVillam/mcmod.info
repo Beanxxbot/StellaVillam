@@ -1,0 +1,16 @@
+[
+{
+  "modid": "stellavillam",
+  "name": "Stella Villam",
+  "description": "A Stardew Valley inspired mod for Minecraft, including new crops, new machines, and new foods!",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Beanxxbot"],
+  "credits": "Stardew Valley, for existing, and also to the people who helped me make this mod. You know who your are :D",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
