@@ -11,7 +11,7 @@ public final class ItemRenderRegister
     public static void registerItemRender()
     {
         register(ModItems.copperIngot);
-        register(ModItems.iridumIngot);
+        register(ModItems.iridiumIngot);
         register(ModItems.refinedQuartz);
     }
 

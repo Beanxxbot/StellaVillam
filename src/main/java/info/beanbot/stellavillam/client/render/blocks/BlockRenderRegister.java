@@ -17,7 +17,6 @@ public final class BlockRenderRegister
 
     public static void register(Block block)
     {
-        Minecraft.getMinecraft().getRenderItem().getItemModelMesher()
-                .register(Item.getItemFromBlock(block), 0, new ModelResourceLocation(StellaVillam.MODID + ":" + block.getUnlocalizedName().substring(5), "inventory"));    }
+        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), 0, new ModelResourceLocation(StellaVillam.MODID + ":" + block.getUnlocalizedName().substring(5), "inventory"));    }
 
 }

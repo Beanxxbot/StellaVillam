@@ -1,0 +1,8 @@
+#Items
+item.copperIngot.name=Copper Ingot
+item.iridiumIngot.name=Iridium Ingot
+item.refinedQuartz.name=Refined Quartz
+
+#Blocks
+tile.copperOre.name=Copper Ore
+tile.iridiumOre.name=Iridium Ore
