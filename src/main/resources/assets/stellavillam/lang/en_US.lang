@@ -6,3 +6,30 @@ item.refinedQuartz.name=Refined Quartz
 #Blocks
 tile.copperOre.name=Copper Ore
 tile.iridiumOre.name=Iridium Ore
+
+#Food
+item.cauliflower.name=Cauliflower
+item.garlic.name=Garlic
+item.greenBean.name=Green Bean
+item.kale.name=Kale
+item.parsnip.name=Parsnip
+item.rhubarb.name=Rhubarb
+item.strawberry.name=Strawberry
+item.blueberry.name=Blueberry
+item.corn.name=Corn
+item.hotPepper.name=Hot Pepper
+item.radish.name=Radish
+item.redCabbage.name=Red Cabbage
+item.starfruit.name=Starfruit
+item.tomato.name=Tomato
+item.artichoke.name=Artichoke
+item.bokChoy.name=Bok Choy
+item.cranberries.name=Cranberries
+item.eggplant.name=Eggplant
+item.grape.name=Grape
+item.yam.name=Yam
+item.sweetGemBerry.name=Sweet Gem Berry
+item.ancientFruit.name=Ancient Fruit
+item.cheese.name=Cheese
+item.artichokeDip.name=Artichoke Dip
+item.autumnsBounty.name=Autumn's Bounty

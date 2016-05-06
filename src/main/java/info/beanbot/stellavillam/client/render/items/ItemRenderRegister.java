@@ -5,6 +5,7 @@ import info.beanbot.stellavillam.items.ModItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
+import net.minecraftforge.fml.common.Mod;
 
 public final class ItemRenderRegister
 {
@@ -13,6 +14,31 @@ public final class ItemRenderRegister
         register(ModItems.copperIngot);
         register(ModItems.iridiumIngot);
         register(ModItems.refinedQuartz);
+        register(ModItems.foodCauliflower);
+        register(ModItems.foodGarlic);
+        register(ModItems.foodGreenBean);
+        register(ModItems.foodKale);
+        register(ModItems.foodParsnip);
+        register(ModItems.foodRhubarb);
+        register(ModItems.foodStrawberry);
+        register(ModItems.foodBlueberry);
+        register(ModItems.foodCorn);
+        register(ModItems.foodHotPepper);
+        register(ModItems.foodRadish);
+        register(ModItems.foodRedCabbage);
+        register(ModItems.foodStarfruit);
+        register(ModItems.foodTomato);
+        register(ModItems.foodArtichoke);
+        register(ModItems.foodBokChoy);
+        register(ModItems.foodCranberries);
+        register(ModItems.foodEggplant);
+        register(ModItems.foodGrape);
+        register(ModItems.foodYam);
+        register(ModItems.foodSweetGemBerry);
+        register(ModItems.foodAncientFruit);
+        register(ModItems.cheese);
+        register(ModItems.mealArtichokeDip);
+        register(ModItems.autumnsBounty);
     }
 
     public static void register(Item item)
