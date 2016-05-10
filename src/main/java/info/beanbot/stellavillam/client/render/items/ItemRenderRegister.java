@@ -39,6 +39,8 @@ public final class ItemRenderRegister
         register(ModItems.cheese);
         register(ModItems.mealArtichokeDip);
         register(ModItems.autumnsBounty);
+        register(ModItems.beanHotpot);
+        register(ModItems.blueberryTart);
     }
 
     public static void register(Item item)

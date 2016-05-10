@@ -1,6 +1,8 @@
 package info.beanbot.stellavillam.items;
 
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public final class ModItems
@@ -38,6 +40,7 @@ public final class ModItems
     public static Item cheese;
     public static Item autumnsBounty;
     public static Item beanHotpot;
+    public static Item blackberryCobbler;
     public static Item blueberryTart;
     public static Item bruschetta;
     public static Item cranberryCanyd;
@@ -65,6 +68,9 @@ public final class ModItems
         GameRegistry.registerItem(cheese = new ItemFoodBase("cheese", 4, 0.4f, false), "cheese");
         GameRegistry.registerItem(mealArtichokeDip = new ItemFoodBase("artichokeDip", 6, 0.8f, false), "artichokeDip");
         GameRegistry.registerItem(autumnsBounty = new ItemFoodBase("autumnsBounty", 10, 1.6f, false), "autumnsBounty");
+        GameRegistry.registerItem(beanHotpot = new ItemFoodBase("beanHotpot", 6, 0.8f, false), "beanHotpot");
+        //GameRegistry.registerItem(blackberryCobbler = new ItemFoodBase("blackberryCobbler", 10, 1.2f, false), "blackberryCobbler");
+        GameRegistry.registerItem(blueberryTart = new ItemFoodBase("blueberryTart", 10, 1.2f, false), "blueberryTart");
 
         GameRegistry.registerItem(foodCauliflower = new ItemFoodBase("cauliflower", 2, 0.2f, false), "cauliflower");
         GameRegistry.registerItem(foodGarlic = new ItemFoodBase("garlic", 2, 0.2f, false), "garlic");

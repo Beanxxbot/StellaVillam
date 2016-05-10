@@ -9,10 +9,15 @@ public final class ModBlocks
     public static Block copperOre;
     public static Block iridiumOre;
 
+    public static Block cheesePress;
+
     public static void createBlocks()
     {
+
         GameRegistry.registerBlock(copperOre = new BlockBase("copperOre").setCreativeTab(CreativeTabs.tabBlock), "copperOre").setHarvestLevel("pickaxe", 1);
         GameRegistry.registerBlock(iridiumOre = new BlockBase("iridiumOre").setCreativeTab(CreativeTabs.tabBlock), "iridiumOre").setHarvestLevel("pickaxe", 3);
+
+        GameRegistry.registerBlock(cheesePress = new BlockOpaque("cheesePress").setCreativeTab(CreativeTabs.tabMisc), "cheesePress").setHarvestLevel("axe", 0);
     }
 
 }

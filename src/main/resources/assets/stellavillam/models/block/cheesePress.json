@@ -1,0 +1,69 @@
+{
+"__comment": "Designed by Beanxxbot with BDcraft Cubik PRO 0.96 Beta - http://bdcraft.net",
+"textures": {
+    "down": "stellavillam:blocks/cheesePress_side",
+    "up": "stellavillam:blocks/cheesePress_top",
+    "north": "stellavillam:blocks/cheesePress_front",
+    "south": "stellavillam:blocks/cheesePress_side",
+    "west": "stellavillam:blocks/cheesePress_side",
+    "east": "stellavillam:blocks/cheesePress_side",
+    "sideSmall": "stellavillam:blocks/cheesePress_smallSide",
+    "topSmall": "stellavillam:blocks/cheesePress_smallTop",
+    "metal": "stellavillam:blocks/cheesePress_metal",
+    "particle": "#sideSmall"
+},
+"elements": [ 
+{
+    "__comment": "Bottom White",
+    "from": [ 2, 0, 2 ],
+    "to": [ 14, 11, 14 ],
+    "faces": {
+        "down":  { "uv": [ 2, 5, 14, 16 ], "texture": "#down" },
+        "up":    { "uv": [ 2, 2, 14, 14 ], "texture": "#up" },
+        "north": { "uv": [ 2, 5, 14, 16 ], "texture": "#north" },
+        "south": { "uv": [ 2, 5, 14, 16 ], "texture": "#south" },
+        "west":  { "uv": [ 2, 5, 14, 16 ], "texture": "#west" },
+        "east":  { "uv": [ 2, 5, 14, 16 ], "texture": "#east" }
+    }
+},
+{
+    "__comment": "Middle White",
+    "from": [ 4, 11, 4 ],
+    "to": [ 12, 16, 12 ],
+    "faces": {
+        "down":  { "uv": [ 12, 16, 4, 11 ], "texture": "#sideSmall" },
+        "up":    { "uv": [ 4, 4, 12, 12 ], "texture": "#topSmall" },
+        "north": { "uv": [ 4, 11, 12, 16 ], "texture": "#sideSmall" },
+        "south": { "uv": [ 4, 11, 12, 16 ], "texture": "#sideSmall" },
+        "west":  { "uv": [ 4, 11, 12, 16 ], "texture": "#sideSmall" },
+        "east":  { "uv": [ 4, 11, 12, 16 ], "texture": "#sideSmall" }
+    }
+},
+{
+    "__comment": "Pole White",
+    "from": [ 7.5, 18, 7.5 ],
+    "to": [ 8.5, 24, 8.5 ],
+    "faces": {
+        "down":  { "uv": [ 13, 11, 14, 5 ], "texture": "#down" },
+        "up":    { "uv": [ 13, 2, 14, 8 ], "texture": "#up" },
+        "north": { "uv": [ 13, 5, 14, 11 ], "texture": "#north" },
+        "south": { "uv": [ 13, 5, 14, 11 ], "texture": "#south" },
+        "west":  { "uv": [ 13, 5, 14, 11 ], "texture": "#west" },
+        "east":  { "uv": [ 14, 5, 13, 11 ], "texture": "#east" }
+    }
+},
+{
+    "__comment": "Cube White",
+    "from": [ 7, 16, 7 ],
+    "to": [ 9, 18, 9 ],
+    "faces": {
+        "down":  { "uv": [ 7, 16, 9, 14 ], "texture": "#metal" },
+        "up":    { "uv": [ 7, 14, 9, 16 ], "texture": "#metal" },
+        "north": { "uv": [ 7, 14, 9, 16 ], "texture": "#metal" },
+        "south": { "uv": [ 7, 16, 9, 14 ], "texture": "#metal" },
+        "west":  { "uv": [ 7, 14, 9, 16 ], "texture": "#metal" },
+        "east":  { "uv": [ 9, 14, 7, 16 ], "texture": "#metal" }
+    }
+}
+]
+}

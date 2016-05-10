@@ -7,7 +7,7 @@ item.refinedQuartz.name=Refined Quartz
 tile.copperOre.name=Copper Ore
 tile.iridiumOre.name=Iridium Ore
 
-#Food
+#Crops
 item.cauliflower.name=Cauliflower
 item.garlic.name=Garlic
 item.greenBean.name=Green Bean
@@ -30,6 +30,10 @@ item.grape.name=Grape
 item.yam.name=Yam
 item.sweetGemBerry.name=Sweet Gem Berry
 item.ancientFruit.name=Ancient Fruit
+
+#Food
 item.cheese.name=Cheese
 item.artichokeDip.name=Artichoke Dip
 item.autumnsBounty.name=Autumn's Bounty
+item.beanHotpot.name=Bean Hotpot
+item.blueberryTart.name=Blueberry Tart

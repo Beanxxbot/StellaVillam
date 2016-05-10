@@ -13,6 +13,7 @@ public final class BlockRenderRegister
     {
         register(ModBlocks.copperOre);
         register(ModBlocks.iridiumOre);
+        register(ModBlocks.cheesePress);
     }
 
     public static void register(Block block)

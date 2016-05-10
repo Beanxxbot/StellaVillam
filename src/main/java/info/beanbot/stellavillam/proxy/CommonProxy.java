@@ -3,6 +3,7 @@ package info.beanbot.stellavillam.proxy;
 import info.beanbot.stellavillam.blocks.ModBlocks;
 import info.beanbot.stellavillam.crafting.ModVanillaCrafting;
 import info.beanbot.stellavillam.items.ModItems;
+import info.beanbot.stellavillam.world.GrassGen;
 import info.beanbot.stellavillam.world.OreWorldGen;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
@@ -35,7 +36,7 @@ public class CommonProxy
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent post)
     {
-        MinecraftForge.addGrassSeed(new ItemStack(ModItems.foodBlueberry), 70);
+        GrassGen.init();
     }
 
 }
