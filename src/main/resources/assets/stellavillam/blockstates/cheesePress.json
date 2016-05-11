@@ -1,5 +1,8 @@
 {
   "variants": {
-    "normal": { "model": "stellavillam:cheesePress" }
+    "facing=north": { "model": "stellavillam:cheesePress" },
+    "facing=south": { "model": "stellavillam:cheesePress", "y": 180 },
+    "facing=west":  { "model": "stellavillam:cheesePress", "y": 270 },
+    "facing=east":  { "model": "stellavillam:cheesePress", "y": 90 }
   }
 }

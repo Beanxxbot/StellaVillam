@@ -1,5 +1,8 @@
 package info.beanbot.stellavillam.blocks;
 
+import info.beanbot.stellavillam.StellaVillam;
+import info.beanbot.stellavillam.network.ModGuiHandler;
+import info.beanbot.stellavillam.tile.TileCheesePress;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.material.Material;
@@ -9,8 +12,12 @@ import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.InventoryHelper;
+import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumHand;
 import net.minecraft.util.Rotation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -25,6 +32,7 @@ public class TileBlockCheesePress extends BlockContainer {
         this.setCreativeTab(CreativeTabs.tabMisc);
         this.setHardness(1.0f);
         this.setResistance(1.0f);
+        this.isBlockContainer = true;
 
         this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
     }
@@ -32,7 +40,37 @@ public class TileBlockCheesePress extends BlockContainer {
     @Override
     public TileEntity createNewTileEntity(World worldIn, int meta)
     {
-        return new TileBlockCheesePress();
+        return new TileCheesePress();
+    }
+
+    @Override
+    public void breakBlock(World world, BlockPos pos, IBlockState state) {
+        TileCheesePress te = (TileCheesePress) world.getTileEntity(pos);
+        InventoryHelper.dropInventoryItems(world, pos, te);
+        super.breakBlock(world, pos, state);
+        world.removeTileEntity(pos);
+    }
+
+    @Override
+    public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
+        if (!world.isRemote) {
+            player.openGui(StellaVillam.instance, ModGuiHandler.MOD_TILE_ENTITY_GUI, world, pos.getX(), pos.getY(), pos.getZ());
+        }
+        return true;
+    }
+
+    @Override
+    public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
+        if (stack.hasDisplayName()) {
+            ((TileCheesePress) worldIn.getTileEntity(pos)).setCustomName(stack.getDisplayName());
+        }
+    }
+
+    @Override
+    public boolean onBlockEventReceived(World worldIn, BlockPos pos, IBlockState state, int eventID, int eventParam) {
+        super.onBlockEventReceived(worldIn, pos, state, eventID, eventParam);
+        TileEntity tileentity = worldIn.getTileEntity(pos);
+        return tileentity == null ? false : tileentity.receiveClientEvent(eventID, eventParam);
     }
 
 
