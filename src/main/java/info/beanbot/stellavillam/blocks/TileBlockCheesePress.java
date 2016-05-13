@@ -26,9 +26,9 @@ public class TileBlockCheesePress extends BlockContainer {
 
     public static final PropertyDirection FACING = BlockHorizontal.FACING;
 
-    public TileBlockCheesePress() {
+    public TileBlockCheesePress(String name) {
         super(Material.wood);
-        this.setUnlocalizedName("cheesePress");
+        this.setUnlocalizedName(name);
         this.setCreativeTab(CreativeTabs.tabMisc);
         this.setHardness(1.0f);
         this.setResistance(1.0f);
@@ -64,6 +64,8 @@ public class TileBlockCheesePress extends BlockContainer {
         if (stack.hasDisplayName()) {
             ((TileCheesePress) worldIn.getTileEntity(pos)).setCustomName(stack.getDisplayName());
         }
+
+        this.setDefaultFacing(worldIn, pos, state);
     }
 
     @Override
@@ -73,18 +75,21 @@ public class TileBlockCheesePress extends BlockContainer {
         return tileentity == null ? false : tileentity.receiveClientEvent(eventID, eventParam);
     }
 
-
-
-
-
     @Override
     public boolean isOpaqueCube(IBlockState state) {
         return false;
     }
 
-    public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state)
+    @Override
+    public boolean isFullCube(IBlockState state)
     {
-        this.setDefaultFacing(worldIn, pos, state);
+        return false;
+    }
+
+    @Override
+    public boolean isFullBlock(IBlockState state)
+    {
+        return false;
     }
 
     public void setDefaultFacing(World worldIn, BlockPos pos, IBlockState state)
@@ -95,7 +100,7 @@ public class TileBlockCheesePress extends BlockContainer {
             IBlockState iblockstate1 = worldIn.getBlockState(pos.south());
             IBlockState iblockstate2 = worldIn.getBlockState(pos.west());
             IBlockState iblockstate3 = worldIn.getBlockState(pos.east());
-            EnumFacing enumfacing = (EnumFacing)state.getValue(FACING);
+            EnumFacing enumfacing = state.getValue(FACING);
 
             if (enumfacing == EnumFacing.NORTH && iblockstate.isFullBlock() && !iblockstate1.isFullBlock())
             {
@@ -120,6 +125,7 @@ public class TileBlockCheesePress extends BlockContainer {
 
     public IBlockState onBlockPlaced(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer) {
         return this.getDefaultState().withProperty(FACING, placer.getHorizontalFacing().getOpposite());
+
     }
 
     public IBlockState getStateFromMeta(int meta)
@@ -136,12 +142,12 @@ public class TileBlockCheesePress extends BlockContainer {
 
     public int getMetaFromState(IBlockState state)
     {
-        return ((EnumFacing)state.getValue(FACING)).getIndex();
+        return (state.getValue(FACING)).getIndex();
     }
 
     public IBlockState withRotation(IBlockState state, Rotation rot)
     {
-        return state.withProperty(FACING, rot.rotate((EnumFacing)state.getValue(FACING)));
+        return state.withProperty(FACING, rot.rotate(state.getValue(FACING)));
     }
 
     protected BlockStateContainer createBlockState()

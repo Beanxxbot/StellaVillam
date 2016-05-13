@@ -12,6 +12,8 @@ public final class ModBlocks
 
     public static Block cheesePress;
 
+    public static Block testBlock;
+
     @SuppressWarnings("deprecated")
     public static void createBlocks()
     {
@@ -19,7 +21,8 @@ public final class ModBlocks
         GameRegistry.registerBlock(copperOre = new BlockBase("copperOre").setCreativeTab(CreativeTabs.tabBlock), "copperOre").setHarvestLevel("pickaxe", 1);
         GameRegistry.registerBlock(iridiumOre = new BlockBase("iridiumOre").setCreativeTab(CreativeTabs.tabBlock), "iridiumOre").setHarvestLevel("pickaxe", 3);
 
-        GameRegistry.registerBlock(cheesePress = new TileBlockCheesePress().setCreativeTab(CreativeTabs.tabMisc), "cheesePress").setHarvestLevel("axe", 0);
+        GameRegistry.registerBlock(cheesePress = new TileBlockCheesePress("cheesePress").setCreativeTab(CreativeTabs.tabMisc), "cheesePress").setHarvestLevel("axe", 0);
+
     }
 
 }

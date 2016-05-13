@@ -10,7 +10,7 @@
     "sideSmall": "stellavillam:blocks/cheesePress_smallSide",
     "topSmall": "stellavillam:blocks/cheesePress_smallTop",
     "metal": "stellavillam:blocks/cheesePress_metal",
-    "particle": "#sideSmall"
+    "particle": "stellavillam:blocks/cheesePress_side"
 },
 "elements": [ 
 {

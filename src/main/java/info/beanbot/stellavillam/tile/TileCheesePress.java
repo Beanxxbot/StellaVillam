@@ -1,14 +1,20 @@
 package info.beanbot.stellavillam.tile;
 
+import info.beanbot.stellavillam.StellaVillam;
+import info.beanbot.stellavillam.network.ModGuiHandler;
 import net.minecraft.block.ITileEntityProvider;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.IProgressUpdate;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
+import net.minecraft.world.World;
 
 public class TileCheesePress extends TileEntity implements IInventory
 {
@@ -45,6 +51,8 @@ public class TileCheesePress extends TileEntity implements IInventory
     @Override
     public ITextComponent getDisplayName() {
         return null;
+
+        //return this.hasCustomName() ? new ChatComponentText(this.getName()) : new ChatComponentTranslation(this.getName());
     }
 
     @Override
@@ -59,6 +67,7 @@ public class TileCheesePress extends TileEntity implements IInventory
             return null;
         return this.inventory[index];
     }
+
 
     @Override
     public ItemStack decrStackSize(int index, int count) {
@@ -153,7 +162,7 @@ public class TileCheesePress extends TileEntity implements IInventory
 
     @Override
     public void writeToNBT(NBTTagCompound nbt) {
-        super.writeToNBT(nbt);
+        //super.writeToNBT(nbt);
 
         NBTTagList list = new NBTTagList();
         for (int i = 0; i < this.getSizeInventory(); ++i) {

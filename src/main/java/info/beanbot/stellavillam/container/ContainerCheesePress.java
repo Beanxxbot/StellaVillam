@@ -14,19 +14,19 @@ public class ContainerCheesePress extends net.minecraft.inventory.Container {
         this.te = te;
 
         //Input and Output Slot 0-1
-        this.addSlotToContainer(new Slot(te, 0, 52, 8));
-        this.addSlotToContainer(new Slot(te, 1, 106, 8));
+        this.addSlotToContainer(new Slot(te, 0, 53, 9));
+        this.addSlotToContainer(new Slot(te, 1, 107, 9));
 
-        //Player Gui 2-28
+        // Player Inventory, Slot 9-35, Slot IDs 9-35
         for (int y = 0; y < 3; ++y) {
             for (int x = 0; x < 9; ++x) {
-                this.addSlotToContainer(new Slot(playerInv, x + y * 9 + 2, 7 + x * 18, 33 + y * 18));
+                this.addSlotToContainer(new Slot(playerInv, x + y * 9 + 9, 8 + x * 18, 34 + y * 18));
             }
         }
 
-        //Player Hotbar 29-37
+        // Player Inventory, Slot 0-8, Slot IDs 36-44
         for (int x = 0; x < 9; ++x) {
-            this.addSlotToContainer(new Slot(playerInv, x, 7 + x * 18, 141));
+            this.addSlotToContainer(new Slot(playerInv, x, 8 + x * 18, 92));
         }
 
     }
